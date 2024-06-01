@@ -1,13 +1,10 @@
 // cSpell Settings
 {
-    "version": "0.2",
-    "language": "en",
-    // words - list of words to be always considered correct
-    "words": [
-        "tauri"
-    ],
-    // flagWords - list of words to be always considered incorrect
-    // This is useful for offensive words and common spelling errors.
-    "flagWords": [
-    ]
+  "version": "0.2",
+  "language": "en",
+  // words - list of words to be always considered correct
+  "words": ["tauri", "specta"],
+  // flagWords - list of words to be always considered incorrect
+  // This is useful for offensive words and common spelling errors.
+  "flagWords": []
 }

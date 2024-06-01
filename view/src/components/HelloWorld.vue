@@ -1,12 +1,25 @@
 <script setup lang="ts">
+import { ref } from 'vue'
+import { greet } from '../bindings'
+
 defineProps<{
   msg: string
 }>()
+
+const msg1 = ref('Hello World111!')
+const count = ref(0)
+const name = ref('name')
+
+async function increment() {
+  msg1.value = await greet('name')
+}
 </script>
 
 <template>
   <div class="greetings">
-    <h1 class="green">{{ msg }}</h1>
+    <h1 class="green">{{ msg1 }}</h1>
+    <button @click="increment">commit</button>
+    <input type="text" v-model="name" />
     <h3>
       You’ve successfully created a project with
       <a href="https://vitejs.dev/" target="_blank" rel="noopener">Vite</a> +

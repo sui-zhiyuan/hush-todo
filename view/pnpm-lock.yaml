@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@tauri-apps/api':
+        specifier: ^1.5.6
+        version: 1.5.6
       vue:
         specifier: ^3.4.21
         version: 3.4.27(typescript@5.4.5)
@@ -378,6 +381,10 @@ packages:
 
   '@sinclair/typebox@0.27.8':
     resolution: {integrity: sha512-+Fj43pSMwJs4KRrH/938Uf+uAELIgVBmQzg/q1YG10djyfA3TnrU8N8XzqCh/okZdszqBQTZf96idMfE5lnwTA==}
+
+  '@tauri-apps/api@1.5.6':
+    resolution: {integrity: sha512-LH5ToovAHnDVe5Qa9f/+jW28I6DeMhos8bNDtBOmmnaDpPmJmYLyHdeDblAWWWYc7KKRDg9/66vMuKyq0WIeFA==}
+    engines: {node: '>= 14.6.0', npm: '>= 6.6.0', yarn: '>= 1.19.1'}
 
   '@tauri-apps/cli-darwin-arm64@1.5.14':
     resolution: {integrity: sha512-lxoSOp3KKSqzHJa7iT32dukPGMlfsTuja1xXSgwR8o/fqzpYJY7FY/3ZxesP8HR66FcK+vtqa//HNqeOQ0mHkA==}
@@ -1896,6 +1903,8 @@ snapshots:
   '@rushstack/eslint-patch@1.10.3': {}
 
   '@sinclair/typebox@0.27.8': {}
+
+  '@tauri-apps/api@1.5.6': {}
 
   '@tauri-apps/cli-darwin-arm64@1.5.14':
     optional: true

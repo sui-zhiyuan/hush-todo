@@ -1,25 +1,11 @@
 {
-  "name": "view",
-  "version": "0.0.0",
-  "private": true,
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "run-p type-check \"build-only {@}\" --",
-    "preview": "vite preview",
-    "test:unit": "vitest",
-    "build-only": "vite build",
-    "type-check": "vue-tsc --build --force",
-    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
-    "format": "prettier --write src/"
-  },
   "dependencies": {
+    "@tauri-apps/api": "^1.5.6",
     "vue": "^3.4.21",
     "vue-router": "^4.3.0"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.8.0",
-    "@tauri-apps/cli": "^1.5.14",
     "@tsconfig/node20": "^20.1.4",
     "@types/jsdom": "^21.1.6",
     "@types/node": "^20.12.5",
@@ -37,5 +23,20 @@
     "vite": "^5.2.8",
     "vitest": "^1.4.0",
     "vue-tsc": "^2.0.11"
-  }
+  },
+  "name": "view",
+  "private": true,
+  "scripts": {
+    "build": "run-s generate-client type-check \"build-only {@}\" --",
+    "build-only": "vite build",
+    "dev": "run-s generate-client vite",
+    "format": "prettier --write src/",
+    "generate-client": "cd ../model-tauri && cargo test --package app --bin app -- generate1::export_bindings --exact --show-output",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
+    "preview": "vite preview",
+    "test:unit": "vitest",
+    "type-check": "vue-tsc --build --force"
+  },
+  "type": "module",
+  "version": "0.0.0"
 }

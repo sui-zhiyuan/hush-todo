@@ -4,10 +4,11 @@
   },
   "editor.formatOnSave": true,
   "explorer.fileNesting.patterns": {
-    "package.json": "pnpm-lock.yaml",
+    "package.json": "pnpm-lock.yaml"
   },
-  "rust-analyzer.linkedProjects": [
-    "model-tauri/Cargo.toml"
-  ],
+  "rust-analyzer.linkedProjects": ["model-tauri/Cargo.toml"],
   "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[rust]": {
+    "editor.defaultFormatter": "rust-lang.rust-analyzer"
+  }
 }
