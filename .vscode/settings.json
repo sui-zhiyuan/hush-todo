@@ -1,0 +1,10 @@
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit"
+  },
+  "editor.formatOnSave": true,
+  "explorer.fileNesting.patterns": {
+    "package.json": "pnpm-lock.yaml",
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+}
