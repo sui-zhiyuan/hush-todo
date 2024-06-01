@@ -6,5 +6,8 @@
   "explorer.fileNesting.patterns": {
     "package.json": "pnpm-lock.yaml",
   },
+  "rust-analyzer.linkedProjects": [
+    "model-tauri/Cargo.toml"
+  ],
   "editor.defaultFormatter": "esbenp.prettier-vscode",
 }
